@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="622.0" prefWidth="972.0" style="-fx-background-color: #353A56;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.charging_app_homepage.ChargerController">
+   <children>
+      <Pane layoutY="6.0" prefHeight="311.0" prefWidth="972.0" style="-fx-background-color: #141313;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Text fill="WHITE" layoutX="14.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Time Remaining:">
+               <font>
+                  <Font name="System Bold" size="31.0" />
+               </font>
+            </Text>
+            <Text fx:id="time_remaining_words" fill="WHITE" layoutX="14.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="15 Mins">
+               <font>
+                  <Font name="System Bold" size="35.0" />
+               </font>
+            </Text>
+            <Button fx:id="HomeButton" layoutX="745.0" layoutY="17.0" mnemonicParsing="false" onAction="#loadHomePage" prefHeight="100.0" prefWidth="200.0" styleClass="HomeButton" stylesheets="@homepagestyle.css" text="Your Car" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="67.0" fitWidth="108.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@teehee.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Text fx:id="charging_boolean" fill="WHITE" layoutX="14.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Not Charging" wrappingWidth="430.2179412841797">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <ImageView fitHeight="311.0" fitWidth="515.0" layoutX="227.0" layoutY="143.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="227.0" AnchorPane.rightAnchor="229.79999999999995">
+         <image>
+            <Image url="@car_test.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="battey_image" fitHeight="168.0" fitWidth="226.0" layoutX="374.0" layoutY="271.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="374.0" AnchorPane.rightAnchor="229.79999999999995">
+         <image>
+            <Image url="@charging-8830_256.gif" />
+         </image>
+      </ImageView>
+      <Text fx:id="battery_percentage" fill="WHITE" layoutX="460.0" layoutY="442.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0%" AnchorPane.leftAnchor="460.0">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Text>
+      <Text fx:id="time_remaining_analog" fill="WHITE" layoutX="661.0" layoutY="454.0" strokeType="OUTSIDE" strokeWidth="0.0" text="00:00:00" textAlignment="CENTER" wrappingWidth="327.92579650878906" AnchorPane.leftAnchor="661.0" AnchorPane.rightAnchor="-16.725796508789017">
+         <font>
+            <Font name="System Bold" size="37.0" />
+         </font>
+      </Text>
+      <!-- Start Button -->
+      <Button fx:id="startChargingButton" layoutX="234.0" layoutY="533.0" mnemonicParsing="false" onAction="#startCharging" prefHeight="29.0" prefWidth="144.0" text="Start Charging" textFill="WHITE" AnchorPane.leftAnchor="234.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <!-- Stop Button -->
+      <Button fx:id="stopChargingButton" disable="true" layoutX="526.0" layoutY="533.0" mnemonicParsing="false" onAction="#stopCharging" prefHeight="29.0" prefWidth="144.0" text="Stop Charging" textFill="WHITE" AnchorPane.leftAnchor="526.0" AnchorPane.rightAnchor="301.6">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

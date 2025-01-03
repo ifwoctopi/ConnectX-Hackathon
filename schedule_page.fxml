@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="632.0" prefWidth="922.0" style="-fx-background-color: #FFFF;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.charging_app_homepage.ScheduleController">
+   <children>
+      <Pane layoutX="211.0" layoutY="-4.0" prefHeight="638.0" prefWidth="710.0" style="-fx-background-color: #FFFFFF;">
+         <children>
+            <Text layoutX="205.0" layoutY="94.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Schedule Your Charge">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Text>
+            <DatePicker fx:id="datePicker" layoutX="192.0" layoutY="151.0" prefHeight="25.0" prefWidth="273.0" />
+            <Text layoutX="192.0" layoutY="148.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select A Date">
+               <font>
+                  <Font size="9.0" />
+               </font>
+            </Text>
+            <Text layoutX="191.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select A Duration for Your Appointment" wrappingWidth="192.96282958984375">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Text>
+            <Pane layoutX="375.0" layoutY="227.0" prefHeight="84.0" prefWidth="122.0" style="-fx-background-color: #EDEDED;">
+               <children>
+                  <Label layoutX="43.0" layoutY="1.0" text="MIN" textFill="#0000009c">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="minuteField" alignment="CENTER" layoutX="6.0" layoutY="27.0" prefHeight="51.0" prefWidth="110.0">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </Pane>
+            <Pane layoutX="193.0" layoutY="227.0" prefHeight="84.0" prefWidth="122.0" style="-fx-background-color: #EDEDED;">
+               <children>
+                  <Label layoutX="45.0" text="HR" textFill="#0000009c">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="hourField" alignment="CENTER" layoutX="6.0" layoutY="26.0" prefHeight="51.0" prefWidth="110.0">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </Pane>
+            <Button layoutX="227.0" layoutY="501.0" mnemonicParsing="false" onAction="#handleTimeButton" prefHeight="45.0" prefWidth="53.0" text="3:00" />
+            <Button layoutX="426.0" layoutY="391.0" mnemonicParsing="false" onAction="#handleTimeButton" prefHeight="45.0" prefWidth="53.0" text="12:30" />
+            <Button layoutX="358.0" layoutY="391.0" mnemonicParsing="false" onAction="#handleTimeButton" prefHeight="45.0" prefWidth="53.0" text="12:00" />
+            <Button layoutX="288.0" layoutY="391.0" mnemonicParsing="false" onAction="#handleTimeButton" prefHeight="45.0" prefWidth="53.0" text="11:30" />
+            <Button layoutX="227.0" layoutY="391.0" mnemonicParsing="false" onAction="#handleTimeButton" prefHeight="45.0" prefWidth="53.0" text="11:00" />
+            <Button layoutX="288.0" layoutY="501.0" mnemonicParsing="false" onAction="#handleTimeButton" prefHeight="45.0" prefWidth="53.0" text="3:30" />
+            <Button layoutX="426.0" layoutY="336.0" mnemonicParsing="false" onAction="#handleTimeButton" prefHeight="45.0" prefWidth="53.0" text="10:30" />
+            <Button layoutX="358.0" layoutY="336.0" mnemonicParsing="false" onAction="#handleTimeButton" prefHeight="45.0" prefWidth="53.0" text="10:00" />
+            <Button layoutX="288.0" layoutY="336.0" mnemonicParsing="false" onAction="#handleTimeButton" prefHeight="45.0" prefWidth="53.0" text="9:30" />
+            <Button layoutX="226.0" layoutY="336.0" mnemonicParsing="false" onAction="#handleTimeButton" prefHeight="45.0" prefWidth="53.0" text="9:00" />
+            <Button layoutX="426.0" layoutY="501.0" mnemonicParsing="false" onAction="#handleTimeButton" prefHeight="45.0" prefWidth="53.0" text="4:30" />
+            <Button layoutX="358.0" layoutY="501.0" mnemonicParsing="false" onAction="#handleTimeButton" prefHeight="45.0" prefWidth="53.0" text="4:00" />
+            <Button layoutX="227.0" layoutY="446.0" mnemonicParsing="false" onAction="#handleTimeButton" prefHeight="45.0" prefWidth="53.0" text="1:00" />
+            <Button layoutX="288.0" layoutY="447.0" mnemonicParsing="false" onAction="#handleTimeButton" prefHeight="45.0" prefWidth="53.0" text="1:30" />
+            <Button layoutX="358.0" layoutY="447.0" mnemonicParsing="false" onAction="#handleTimeButton" prefHeight="45.0" prefWidth="53.0" text="2:00" />
+            <Button layoutX="426.0" layoutY="447.0" mnemonicParsing="false" onAction="#handleTimeButton" prefHeight="45.0" prefWidth="53.0" text="2:30" />
+            <Button fx:id="schedule_confirm" layoutX="465.0" layoutY="575.0" mnemonicParsing="false" onAction="#handleConfirmAction" prefHeight="25.0" prefWidth="96.0" text="Schedule" />
+            <Button fx:id="cancel_schedule" layoutX="150.0" layoutY="575.0" mnemonicParsing="false" onAction="#handleCancelAction" prefHeight="25.0" prefWidth="110.0" text="Cancel" />
+         </children>
+      </Pane>
+      <VBox layoutY="5.0" prefHeight="622.0" prefWidth="216.0">
+         <children>
+            <AnchorPane fx:id="side_anchorpane" prefHeight="638.0" prefWidth="216.0" styleClass="side_anchorpane" stylesheets="@homepagestyle.css">
+               <children>
+                  <Pane fx:id="inner_pane" layoutX="7.0" layoutY="25.0" prefHeight="73.0" prefWidth="201.0" styleClass="inner_pane" stylesheets="@../../../../resources/com/example/charging_app_homepage/homepagestyle.css">
+                     <children>
+                        <Pane fx:id="most_inner_pane" layoutX="138.0" layoutY="4.0" prefHeight="64.0" prefWidth="46.0" styleClass="most_inner_pane" stylesheets="@../../../../resources/com/example/charging_app_homepage/homepagestyle.css">
+                           <children>
+                              <ImageView fitHeight="55.0" fitWidth="59.0" layoutX="-4.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@test_menu.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                        <Text fill="WHITE" layoutX="42.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MENU" wrappingWidth="77.90625">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Pane>
+                  <Button fx:id="your_car" layoutX="13.0" layoutY="140.0" mnemonicParsing="false" onAction="#loadHomePage" prefHeight="48.0" prefWidth="188.0" styleClass="HomeButton" stylesheets="@../../../../resources/com/example/charging_app_homepage/homepagestyle.css" text="Your Car" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="41.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@teehee.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="schedule" layoutX="12.0" layoutY="219.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="188.0" styleClass="OtherSideButtons" stylesheets="@homepagestyle.css" text="Schedule" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="41.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@homepageMap_icon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="charging" layoutX="13.0" layoutY="283.0" mnemonicParsing="false" onAction="#loadChargingPage" prefHeight="48.0" prefWidth="188.0" styleClass="OtherSideButtons" stylesheets="@../../../../resources/com/example/charging_app_homepage/homepagestyle.css" text="Charging" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="41.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@homepageBattery_icon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="history" layoutX="3.0" layoutY="346.0" mnemonicParsing="false" onAction="#loadHistoryPage" prefHeight="48.0" prefWidth="188.0" styleClass="OtherSideButtons" stylesheets="@../../../../r/com/example/charging_app_homepage/homepagestyle.css" text="History" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="35.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@homepageHistory_icon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
